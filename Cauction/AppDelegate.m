@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CApiClient.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,6 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[UIViewController new]];
     self.window.rootViewController = navigationController;
-    
     [self.window makeKeyAndVisible];
     return YES;
 }
