@@ -13,7 +13,10 @@
 		F80266551FB3B82600DE022F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F80266541FB3B82600DE022F /* Assets.xcassets */; };
 		F80266581FB3B82600DE022F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F80266561FB3B82600DE022F /* LaunchScreen.storyboard */; };
 		F802665B1FB3B82600DE022F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F802665A1FB3B82600DE022F /* main.m */; };
-		F80266651FB3B82600DE022F /* CauctionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F80266641FB3B82600DE022F /* CauctionTests.m */; };
+		F8936B851FB649E80059ADFC /* CApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F8936B841FB649E80059ADFC /* CApiClient.m */; };
+		F8936B871FB656790059ADFC /* CApiClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8936B861FB656790059ADFC /* CApiClientTests.m */; };
+		F8936B921FB6682F0059ADFC /* CConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F8936B911FB6682F0059ADFC /* CConstants.m */; };
+		F8936B991FB6691A0059ADFC /* NSURL+ApiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = F8936B981FB6691A0059ADFC /* NSURL+ApiFormat.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +44,14 @@
 		F80266591FB3B82600DE022F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F802665A1FB3B82600DE022F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F80266601FB3B82600DE022F /* CauctionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CauctionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F80266641FB3B82600DE022F /* CauctionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CauctionTests.m; sourceTree = "<group>"; };
 		F80266661FB3B82600DE022F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8936B831FB649E80059ADFC /* CApiClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CApiClient.h; sourceTree = "<group>"; };
+		F8936B841FB649E80059ADFC /* CApiClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CApiClient.m; sourceTree = "<group>"; };
+		F8936B861FB656790059ADFC /* CApiClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CApiClientTests.m; sourceTree = "<group>"; };
+		F8936B901FB6682F0059ADFC /* CConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CConstants.h; sourceTree = "<group>"; };
+		F8936B911FB6682F0059ADFC /* CConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CConstants.m; sourceTree = "<group>"; };
+		F8936B971FB6691A0059ADFC /* NSURL+ApiFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+ApiFormat.h"; sourceTree = "<group>"; };
+		F8936B981FB6691A0059ADFC /* NSURL+ApiFormat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+ApiFormat.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +117,8 @@
 		F802664A1FB3B82600DE022F /* Cauction */ = {
 			isa = PBXGroup;
 			children = (
+				F8936B931FB668E90059ADFC /* Categories */,
+				F8936B821FB649200059ADFC /* Providers */,
 				F802664B1FB3B82600DE022F /* AppDelegate.h */,
 				F802664C1FB3B82600DE022F /* AppDelegate.m */,
 				F80266731FB3BAB800DE022F /* Models */,
@@ -115,6 +126,8 @@
 				F80266701FB3BA8B00DE022F /* Supporting Files */,
 				F80266721FB3BAB300DE022F /* ViewModels */,
 				F80266711FB3BAAE00DE022F /* Views */,
+				F8936B901FB6682F0059ADFC /* CConstants.h */,
+				F8936B911FB6682F0059ADFC /* CConstants.m */,
 			);
 			path = Cauction;
 			sourceTree = "<group>";
@@ -122,8 +135,8 @@
 		F80266631FB3B82600DE022F /* CauctionTests */ = {
 			isa = PBXGroup;
 			children = (
-				F80266641FB3B82600DE022F /* CauctionTests.m */,
 				F80266661FB3B82600DE022F /* Info.plist */,
+				F8936B861FB656790059ADFC /* CApiClientTests.m */,
 			);
 			path = CauctionTests;
 			sourceTree = "<group>";
@@ -165,6 +178,24 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F8936B821FB649200059ADFC /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				F8936B831FB649E80059ADFC /* CApiClient.h */,
+				F8936B841FB649E80059ADFC /* CApiClient.m */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		F8936B931FB668E90059ADFC /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F8936B971FB6691A0059ADFC /* NSURL+ApiFormat.h */,
+				F8936B981FB6691A0059ADFC /* NSURL+ApiFormat.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,8 +404,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8936B851FB649E80059ADFC /* CApiClient.m in Sources */,
 				F802665B1FB3B82600DE022F /* main.m in Sources */,
+				F8936B991FB6691A0059ADFC /* NSURL+ApiFormat.m in Sources */,
 				F802664D1FB3B82600DE022F /* AppDelegate.m in Sources */,
+				F8936B921FB6682F0059ADFC /* CConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F80266651FB3B82600DE022F /* CauctionTests.m in Sources */,
+				F8936B871FB656790059ADFC /* CApiClientTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
