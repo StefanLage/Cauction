@@ -17,6 +17,7 @@
 		F8936B871FB656790059ADFC /* CApiClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8936B861FB656790059ADFC /* CApiClientTests.m */; };
 		F8936B921FB6682F0059ADFC /* CConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F8936B911FB6682F0059ADFC /* CConstants.m */; };
 		F8936B991FB6691A0059ADFC /* NSURL+ApiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = F8936B981FB6691A0059ADFC /* NSURL+ApiFormat.m */; };
+		F8936B9C1FB6703C0059ADFC /* CAuction.m in Sources */ = {isa = PBXBuildFile; fileRef = F8936B9B1FB6703C0059ADFC /* CAuction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		F8936B911FB6682F0059ADFC /* CConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CConstants.m; sourceTree = "<group>"; };
 		F8936B971FB6691A0059ADFC /* NSURL+ApiFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+ApiFormat.h"; sourceTree = "<group>"; };
 		F8936B981FB6691A0059ADFC /* NSURL+ApiFormat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+ApiFormat.m"; sourceTree = "<group>"; };
+		F8936B9A1FB6703C0059ADFC /* CAuction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAuction.h; sourceTree = "<group>"; };
+		F8936B9B1FB6703C0059ADFC /* CAuction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAuction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +179,8 @@
 		F80266731FB3BAB800DE022F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F8936B9A1FB6703C0059ADFC /* CAuction.h */,
+				F8936B9B1FB6703C0059ADFC /* CAuction.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -407,6 +412,7 @@
 				F8936B851FB649E80059ADFC /* CApiClient.m in Sources */,
 				F802665B1FB3B82600DE022F /* main.m in Sources */,
 				F8936B991FB6691A0059ADFC /* NSURL+ApiFormat.m in Sources */,
+				F8936B9C1FB6703C0059ADFC /* CAuction.m in Sources */,
 				F802664D1FB3B82600DE022F /* AppDelegate.m in Sources */,
 				F8936B921FB6682F0059ADFC /* CConstants.m in Sources */,
 			);

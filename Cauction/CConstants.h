@@ -8,5 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+// API ENDPOINTS
 FOUNDATION_EXPORT NSString * const BaseUri;
 FOUNDATION_EXPORT NSString * const AuctionEndpoint;
+
+// HTTP HEADERS KEYS
+FOUNDATION_EXPORT NSString * const AcceptKey;
+FOUNDATION_EXPORT NSString * const AcceptValue;
+
+// JSON KEYS
+FOUNDATION_EXPORT NSString * const AuctionEndpoint_AuctionsNestedKey;
