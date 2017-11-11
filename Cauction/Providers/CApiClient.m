@@ -11,6 +11,8 @@
 #import "NSURL+ApiFormat.h"
 #import "CConstants.h"
 
+#import "CAuction.h"
+
 #pragma mark - Network Service
 @protocol CNetworkingService
 - (void) get:(nonnull NSString *)endPoint completion:(nonnull void (^)(NSURLResponse * _Nullable response, id _Nullable responseObject, NSError * _Nonnull error))handler;
@@ -50,15 +52,17 @@
 
 #pragma mark - Public
 
-- (void)getAuctionWithCompletion:(nonnull void (^)(id _Nullable responseObject, NSError  * _Nullable error))handler{
-    [self get:AuctionEndpoint completion:^(NSURLResponse * _Nullable response, id  _Nullable responseObject, NSError * _Nonnull error) {
+- (void)getAuctionWithCompletion:(nonnull void (^)(NSArray<CAuction*> * _Nullable auctions))handler{
+    [self get:AuctionEndpoint completion:^(NSURLResponse * _Nullable response, NSDictionary *  _Nullable responseObject, NSError * _Nonnull error) {
         if (responseObject){
-            // Serialize and return the list of auctions's object
-            handler(responseObject, nil);
+            // Serialize and return the list of auctions
+            NSError * jsonError;
+            NSArray <CAuction*> *auctions = [CAuction arrayOfModelsFromDictionaries:responseObject[AuctionEndpoint_AuctionsNestedKey] error:&jsonError];
+            handler(auctions);
         }
         else{
-            // just return the error
-            handler(nil, error);
+            // should hanlde error itself -> using log service or something
+            handler(nil);
         }
     }];
 }
@@ -69,8 +73,7 @@
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:60.0];
-    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request addValue:AcceptValue forHTTPHeaderField:AcceptKey];
     return request;
 }
 

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class CAuction;
+
 @interface CApiClient : NSObject
 
 /**
@@ -15,6 +17,6 @@
  *
  * @param handler will contains a list of Auction if there is some, in case of any error this list will be nil and error object will be passed through
  */
-- (void)getAuctionWithCompletion:(nonnull void (^)(id _Nullable auctions, NSError * _Nullable error))handler;
+- (void)getAuctionWithCompletion:(nonnull void (^)(NSArray<CAuction*> * _Nullable auctions))handler;
 
 @end

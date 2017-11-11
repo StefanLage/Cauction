@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "CApiClient.h"
 
 @interface AppDelegate ()
 

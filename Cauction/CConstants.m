@@ -8,5 +8,13 @@
 
 #import "CConstants.h"
 
+// API ENDPOINTS
 NSString * const BaseUri = @"http://fc-ios-test.herokuapp.com";
 NSString * const AuctionEndpoint = @"auctions";
+
+// HTTP HEADERS KEYS
+NSString * const AcceptKey = @"Accept";
+NSString * const AcceptValue = @"application/json";
+
+// JSON KEYS
+NSString * const AuctionEndpoint_AuctionsNestedKey = @"items";
