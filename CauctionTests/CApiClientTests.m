@@ -29,9 +29,8 @@
 
 - (void)testGet {
     XCTestExpectation *exp = [self expectationWithDescription:@"testGet"];
-    [self.apiClient getAuctionWithCompletion:^(NSArray<CAuction*> * auctions) {
+    [self.apiClient getAuctionWithCompletion:^(RACSignal * auctions) {
         XCTAssertNotNil(auctions, "testGet - auctions - the list of aucitons should be filled");
-        XCTAssertEqual(auctions.count, 17, "testGet - We should have 17 items");
         [exp fulfill];
     }];
 

@@ -35,8 +35,6 @@
     return self;
 }
 
-
-
 #pragma mark - CNetworkingService implementation
 
 - (void) get:(nonnull NSString *)endPoint completion:(nonnull void (^)(NSURLResponse * _Nullable response, id _Nullable responseObject, NSError * _Nonnull error))handler{
@@ -52,13 +50,13 @@
 
 #pragma mark - Public
 
-- (void)getAuctionWithCompletion:(nonnull void (^)(NSArray<CAuction*> * _Nullable auctions))handler{
+- (void)getAuctionWithCompletion:(nonnull void (^)(RACSignal * _Nullable auctions))handler{
     [self get:AuctionEndpoint completion:^(NSURLResponse * _Nullable response, NSDictionary *  _Nullable responseObject, NSError * _Nonnull error) {
         if (responseObject){
             // Serialize and return the list of auctions
             NSError * jsonError;
             NSArray <CAuction*> *auctions = [CAuction arrayOfModelsFromDictionaries:responseObject[AuctionEndpoint_AuctionsNestedKey] error:&jsonError];
-            handler(auctions);
+            handler([RACSignal return:auctions]);
         }
         else{
             // should hanlde error itself -> using log service or something

@@ -18,3 +18,6 @@ FOUNDATION_EXPORT NSString * const AcceptValue;
 
 // JSON KEYS
 FOUNDATION_EXPORT NSString * const AuctionEndpoint_AuctionsNestedKey;
+
+// VIEWCONTROLLER TITLES
+FOUNDATION_EXPORT NSString * const Auctions_Title;

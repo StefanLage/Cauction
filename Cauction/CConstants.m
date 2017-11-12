@@ -18,3 +18,6 @@ NSString * const AcceptValue = @"application/json";
 
 // JSON KEYS
 NSString * const AuctionEndpoint_AuctionsNestedKey = @"items";
+
+// VIEWCONTROLLER TITLES
+NSString * const Auctions_Title = @"Auctions";

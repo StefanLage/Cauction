@@ -18,6 +18,10 @@
 		F8936B921FB6682F0059ADFC /* CConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F8936B911FB6682F0059ADFC /* CConstants.m */; };
 		F8936B991FB6691A0059ADFC /* NSURL+ApiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = F8936B981FB6691A0059ADFC /* NSURL+ApiFormat.m */; };
 		F8936B9C1FB6703C0059ADFC /* CAuction.m in Sources */ = {isa = PBXBuildFile; fileRef = F8936B9B1FB6703C0059ADFC /* CAuction.m */; };
+		F8936B9F1FB694430059ADFC /* CAuctionsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8936B9E1FB694430059ADFC /* CAuctionsViewModel.m */; };
+		F8936BA21FB69C830059ADFC /* CAuctionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8936BA11FB69C830059ADFC /* CAuctionsViewController.m */; };
+		F8936BA41FB708040059ADFC /* CAuctionsViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8936BA31FB708040059ADFC /* CAuctionsViewModelTests.m */; };
+		F8936BAB1FB727900059ADFC /* CRiskBandFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8936BAA1FB727900059ADFC /* CRiskBandFormatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,13 @@
 		F8936B981FB6691A0059ADFC /* NSURL+ApiFormat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+ApiFormat.m"; sourceTree = "<group>"; };
 		F8936B9A1FB6703C0059ADFC /* CAuction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAuction.h; sourceTree = "<group>"; };
 		F8936B9B1FB6703C0059ADFC /* CAuction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAuction.m; sourceTree = "<group>"; };
+		F8936B9D1FB694430059ADFC /* CAuctionsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAuctionsViewModel.h; sourceTree = "<group>"; };
+		F8936B9E1FB694430059ADFC /* CAuctionsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAuctionsViewModel.m; sourceTree = "<group>"; };
+		F8936BA01FB69C830059ADFC /* CAuctionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAuctionsViewController.h; sourceTree = "<group>"; };
+		F8936BA11FB69C830059ADFC /* CAuctionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAuctionsViewController.m; sourceTree = "<group>"; };
+		F8936BA31FB708040059ADFC /* CAuctionsViewModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAuctionsViewModelTests.m; sourceTree = "<group>"; };
+		F8936BA91FB727900059ADFC /* CRiskBandFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRiskBandFormatter.h; sourceTree = "<group>"; };
+		F8936BAA1FB727900059ADFC /* CRiskBandFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRiskBandFormatter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,17 +131,18 @@
 		F802664A1FB3B82600DE022F /* Cauction */ = {
 			isa = PBXGroup;
 			children = (
-				F8936B931FB668E90059ADFC /* Categories */,
-				F8936B821FB649200059ADFC /* Providers */,
 				F802664B1FB3B82600DE022F /* AppDelegate.h */,
 				F802664C1FB3B82600DE022F /* AppDelegate.m */,
-				F80266731FB3BAB800DE022F /* Models */,
-				F802666F1FB3BA4600DE022F /* Resources */,
-				F80266701FB3BA8B00DE022F /* Supporting Files */,
-				F80266721FB3BAB300DE022F /* ViewModels */,
-				F80266711FB3BAAE00DE022F /* Views */,
+				F8936B931FB668E90059ADFC /* Categories */,
 				F8936B901FB6682F0059ADFC /* CConstants.h */,
 				F8936B911FB6682F0059ADFC /* CConstants.m */,
+				F80266731FB3BAB800DE022F /* Models */,
+				F8936B821FB649200059ADFC /* Providers */,
+				F802666F1FB3BA4600DE022F /* Resources */,
+				F80266701FB3BA8B00DE022F /* Supporting Files */,
+				F8936BA81FB7276F0059ADFC /* Utilities */,
+				F80266721FB3BAB300DE022F /* ViewModels */,
+				F80266711FB3BAAE00DE022F /* Views */,
 			);
 			path = Cauction;
 			sourceTree = "<group>";
@@ -140,6 +152,7 @@
 			children = (
 				F80266661FB3B82600DE022F /* Info.plist */,
 				F8936B861FB656790059ADFC /* CApiClientTests.m */,
+				F8936BA31FB708040059ADFC /* CAuctionsViewModelTests.m */,
 			);
 			path = CauctionTests;
 			sourceTree = "<group>";
@@ -165,6 +178,8 @@
 		F80266711FB3BAAE00DE022F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F8936BA01FB69C830059ADFC /* CAuctionsViewController.h */,
+				F8936BA11FB69C830059ADFC /* CAuctionsViewController.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +187,8 @@
 		F80266721FB3BAB300DE022F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F8936B9D1FB694430059ADFC /* CAuctionsViewModel.h */,
+				F8936B9E1FB694430059ADFC /* CAuctionsViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -201,6 +218,15 @@
 				F8936B981FB6691A0059ADFC /* NSURL+ApiFormat.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		F8936BA81FB7276F0059ADFC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F8936BA91FB727900059ADFC /* CRiskBandFormatter.h */,
+				F8936BAA1FB727900059ADFC /* CRiskBandFormatter.m */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,9 +438,12 @@
 				F8936B851FB649E80059ADFC /* CApiClient.m in Sources */,
 				F802665B1FB3B82600DE022F /* main.m in Sources */,
 				F8936B991FB6691A0059ADFC /* NSURL+ApiFormat.m in Sources */,
+				F8936BAB1FB727900059ADFC /* CRiskBandFormatter.m in Sources */,
 				F8936B9C1FB6703C0059ADFC /* CAuction.m in Sources */,
+				F8936BA21FB69C830059ADFC /* CAuctionsViewController.m in Sources */,
 				F802664D1FB3B82600DE022F /* AppDelegate.m in Sources */,
 				F8936B921FB6682F0059ADFC /* CConstants.m in Sources */,
+				F8936B9F1FB694430059ADFC /* CAuctionsViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8936BA41FB708040059ADFC /* CAuctionsViewModelTests.m in Sources */,
 				F8936B871FB656790059ADFC /* CApiClientTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

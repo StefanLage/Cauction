@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 @class CAuction;
 
@@ -17,6 +18,6 @@
  *
  * @param handler will contains a list of Auction if there is some, in case of any error this list will be nil and error object will be passed through
  */
-- (void)getAuctionWithCompletion:(nonnull void (^)(NSArray<CAuction*> * _Nullable auctions))handler;
+- (void)getAuctionWithCompletion:(nonnull void (^)(RACSignal * _Nullable auctions))handler;
 
 @end
