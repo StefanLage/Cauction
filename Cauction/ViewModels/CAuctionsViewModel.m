@@ -9,6 +9,8 @@
 #import "CAuctionsViewModel.h"
 #import "CApiClient.h"
 #import "CAuction.h"
+#import "CConstants.h"
+#import "CRiskBandFormatter.h"
 
 @interface CAuctionsViewModel()
 
@@ -47,7 +49,7 @@
 #pragma mark - Datasource
 
 - (NSString *) title{
-    return @"Auctions";
+    return Auctions_Title;
 }
 
 - (NSUInteger)auctionsInSection:(NSInteger)section{
@@ -56,11 +58,26 @@
 
 - (NSString *)auctionName:(NSIndexPath *)indexPath{
     CAuction *auction = [self auctionAtIndexPath:indexPath];
-    return [NSString stringWithFormat:@"%@", auction.title];
+    return [auction.title copy];
+}
+
+- (NSString *)esimatedAmountTitleForAuction:(NSIndexPath *)indexPath{
+    CAuction *auctionSelected = [self auctionAtIndexPath:indexPath];
+    return [NSString stringWithFormat:Auction_Era_Title, auctionSelected.title];
+}
+
+- (NSString *)estimatedReturnAmountForAuction:(NSIndexPath *)indexPath{
+    CAuction *auctionSelected = [self auctionAtIndexPath:indexPath];
+    NSString *era = [NSString stringWithFormat:Auction_Era_Rounded, [[CRiskBandFormatter shared] estimatedReturnAmount:auctionSelected
+                                                                                                         withBidAmount:Auctions_Bid_Amount_Default]];
+    return [NSString stringWithFormat:Auction_Era_Text, era];
 }
 
 #pragma mark - Private
 
+/**
+ * Return the auction at indexpath specified
+ */
 - (CAuction *)auctionAtIndexPath:(NSIndexPath *)indexPath{
     return self.auctions[indexPath.row];
 }

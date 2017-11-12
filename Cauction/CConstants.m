@@ -21,3 +21,11 @@ NSString * const AuctionEndpoint_AuctionsNestedKey = @"items";
 
 // VIEWCONTROLLER TITLES
 NSString * const Auctions_Title = @"Auctions";
+
+// DEFAULT VALUES
+float const Auctions_Fee_Default = 0.01f;
+float const Auctions_Bid_Amount_Default = 20.0f;
+NSString * const Auction_Era_Rounded = @"%.2f";
+NSString * const Auction_Era_Title = @"%@'s ERA";
+NSString * const Auction_Era_Text = @"£%@";
+NSString * const Alert_Default_Button_Text = @"OK";
