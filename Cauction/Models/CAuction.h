@@ -9,6 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
 
+typedef enum {
+    APlus,
+    A,
+    B,
+    C,
+    D
+} RiskBand;
+
 @interface CAuction : JSONModel
 
 @property (nonatomic) NSInteger id;
@@ -17,6 +25,9 @@
 @property (nonatomic) float amountCents;
 @property (nonatomic) NSInteger term;
 @property (nonatomic) NSString *riskBand;
+@property (nonatomic, readonly) RiskBand riskBandValue;
 @property (nonatomic) NSDate *closeTime;
+
+- (instancetype) initWithId:(NSInteger)id title:(NSString*)title rate: (float)rate amountRate:(float)amountRate term:(NSInteger)term riskBand:(NSString*)riskBand closeTime:(NSDate*)closeTime;
 
 @end

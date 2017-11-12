@@ -7,9 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "CApiClient.h"
+#import "CAuctionsViewModel.h"
+#import "CAuctionsViewController.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) UINavigationController *navigationController;
 @end
 
 @implementation AppDelegate
@@ -17,10 +20,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[UIViewController new]];
-    self.window.rootViewController = navigationController;
+    if ([AppDelegate isTesting]){
+        self.navigationController = [[UINavigationController alloc] initWithRootViewController:[UIViewController new]];
+    }
+    else{
+        // Create view model, injecting store
+        CAuctionsViewModel *auctionsViewModel = [[CAuctionsViewModel alloc] initWithApiClient: [CApiClient new]];
+        // Create view controller, injecting view model
+        CAuctionsViewController *auctionsViewController = [[CAuctionsViewController alloc] initWithViewModel:auctionsViewModel];
+        // Wrap it in navigation controller before setting it as root view
+        self.navigationController = [[UINavigationController alloc] initWithRootViewController:auctionsViewController];
+    }
+    self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     return YES;
+}
+
++ (BOOL) isTesting
+{
+    NSDictionary* environment = [[NSProcessInfo processInfo] environment];
+    return [environment objectForKey:@"TEST"] != nil;
 }
 
 @end
