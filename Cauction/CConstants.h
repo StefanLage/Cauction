@@ -21,3 +21,11 @@ FOUNDATION_EXPORT NSString * const AuctionEndpoint_AuctionsNestedKey;
 
 // VIEWCONTROLLER TITLES
 FOUNDATION_EXPORT NSString * const Auctions_Title;
+
+// DEFAULT VALUES
+FOUNDATION_EXPORT float const Auctions_Fee_Default;
+FOUNDATION_EXPORT float const Auctions_Bid_Amount_Default;
+FOUNDATION_EXPORT NSString * const Auction_Era_Rounded;
+FOUNDATION_EXPORT NSString * const Auction_Era_Title;
+FOUNDATION_EXPORT NSString * const Auction_Era_Text;
+FOUNDATION_EXPORT NSString * const Alert_Default_Button_Text;

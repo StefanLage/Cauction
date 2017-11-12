@@ -12,6 +12,9 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+/**
+ * Check whether the current environnement is unit test one
+ */
 + (BOOL) isTesting;
 
 @end

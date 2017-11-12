@@ -21,6 +21,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     if ([AppDelegate isTesting]){
+        // No need to create VM and VC while doing Unit Tests here
+        // Would be different for UI Unit tests though
         self.navigationController = [[UINavigationController alloc] initWithRootViewController:[UIViewController new]];
     }
     else{

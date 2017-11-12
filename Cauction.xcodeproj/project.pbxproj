@@ -13,6 +13,7 @@
 		F80266551FB3B82600DE022F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F80266541FB3B82600DE022F /* Assets.xcassets */; };
 		F80266581FB3B82600DE022F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F80266561FB3B82600DE022F /* LaunchScreen.storyboard */; };
 		F802665B1FB3B82600DE022F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F802665A1FB3B82600DE022F /* main.m */; };
+		F80D6FB61FB8952B00B1E2C2 /* CRiskBandFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F80D6FB51FB8952B00B1E2C2 /* CRiskBandFormatterTests.m */; };
 		F8936B851FB649E80059ADFC /* CApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F8936B841FB649E80059ADFC /* CApiClient.m */; };
 		F8936B871FB656790059ADFC /* CApiClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8936B861FB656790059ADFC /* CApiClientTests.m */; };
 		F8936B921FB6682F0059ADFC /* CConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F8936B911FB6682F0059ADFC /* CConstants.m */; };
@@ -50,6 +51,7 @@
 		F802665A1FB3B82600DE022F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F80266601FB3B82600DE022F /* CauctionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CauctionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F80266661FB3B82600DE022F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F80D6FB51FB8952B00B1E2C2 /* CRiskBandFormatterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRiskBandFormatterTests.m; sourceTree = "<group>"; };
 		F8936B831FB649E80059ADFC /* CApiClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CApiClient.h; sourceTree = "<group>"; };
 		F8936B841FB649E80059ADFC /* CApiClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CApiClient.m; sourceTree = "<group>"; };
 		F8936B861FB656790059ADFC /* CApiClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CApiClientTests.m; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				F80266661FB3B82600DE022F /* Info.plist */,
 				F8936B861FB656790059ADFC /* CApiClientTests.m */,
 				F8936BA31FB708040059ADFC /* CAuctionsViewModelTests.m */,
+				F80D6FB51FB8952B00B1E2C2 /* CRiskBandFormatterTests.m */,
 			);
 			path = CauctionTests;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 			files = (
 				F8936BA41FB708040059ADFC /* CAuctionsViewModelTests.m in Sources */,
 				F8936B871FB656790059ADFC /* CApiClientTests.m in Sources */,
+				F80D6FB61FB8952B00B1E2C2 /* CRiskBandFormatterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "CAuctionsViewController.h"
+#import "CConstants.h"
 
 NSString * const CAuctionsCellIdentifier = @"AuctionCell";
 
@@ -22,7 +23,6 @@ NSString * const CAuctionsCellIdentifier = @"AuctionCell";
     self = [super initWithStyle:UITableViewStylePlain];
     if (self){
         _viewModel = viewModel;
-//        [_viewModel loadData];
     }
     return self;
 }
@@ -72,10 +72,40 @@ NSString * const CAuctionsCellIdentifier = @"AuctionCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CAuctionsCellIdentifier
                                                             forIndexPath:indexPath];
-    //
     cell.textLabel.text = [self.viewModel auctionName:indexPath];
-    
     return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    // Get data to show
+    NSString *auctionTitle = [self.viewModel esimatedAmountTitleForAuction:indexPath];
+    NSString *auctionEra = [self.viewModel estimatedReturnAmountForAuction:indexPath];
+    // Display the era's value
+    [self showAuctionEra:auctionTitle
+                 withEra:auctionEra];
+    // Deselect the current cell
+    [tableView deselectRowAtIndexPath:indexPath
+                             animated:YES];
+}
+
+#pragma mark - Auction events
+
+/**
+ * Show the era's value in an UIAlert
+ *
+ */
+- (void) showAuctionEra:(NSString *)auctionTitle withEra:(NSString*)eraValue{
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:auctionTitle
+                                                                    message:eraValue
+                                                             preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:Alert_Default_Button_Text
+                                              style:UIAlertActionStyleDefault
+                                            handler:nil]];
+    [self presentViewController:alert
+                       animated:YES
+                     completion:nil];
 }
 
 @end
